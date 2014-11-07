@@ -174,6 +174,50 @@ public class TennisGameTest {
         String result = game.getScore();
         assertEquals(expResult, result);
     }
+    
+     @Test
+    public void testPuntajeMayorPedroMasde40(){
+        System.out.println("PuntajePedro > 40");
+        game = new TennisGame("Pedro", "Juan");
+        String expResult = "Wrong Score";
+        game.playerOneScores(); //15 0
+        game.playerOneScores(); //30 0
+        game.playerOneScores(); //40 0
+        game.playerOneScores(); //>40 0
+        String result = game.getScore();
+        assertEquals(expResult, result);
+    }
+    
+   @Test
+    public void testPuntajeMayorJuanMasde40(){
+        System.out.println("PuntajeJuan > 40");
+        game = new TennisGame("Pedro", "Juan");
+        String expResult = "Wrong Score";
+        game.playerTwoScores(); //15
+        game.playerTwoScores(); //30
+        game.playerTwoScores(); //40
+        game.playerTwoScores(); //>40
+        String result = game.getScore();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testPuntajeMayorEnAdvantageJuan(){
+        System.out.println("PuntajeMayorEnAdvantageJuan");
+        game = new TennisGame("Pedro", "Juan");
+        String expResult = "Wrong Score";
+        game.playerOneScores(); //15 0
+        game.playerOneScores(); //30 0
+        game.playerOneScores(); //40 0
+        game.playerTwoScores(); //40 15
+        game.playerTwoScores(); //40 30
+        game.playerTwoScores(); //40 40
+        game.playerTwoScores(); //40 av
+        game.playerTwoScores(); //40 av
+        String result = game.getScore();
+        assertEquals(expResult, result);
+    }
+
     /**
      * Test of getScore method, of class TennisGame.
      */

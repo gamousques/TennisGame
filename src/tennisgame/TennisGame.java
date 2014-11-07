@@ -22,7 +22,11 @@ public class TennisGame {
 		this.playerTwoName = playerTwoName;
 	}
 
-	public String getScore() {
+    /**
+     *
+     * @return
+     */
+    public String getScore() {
 
 		if (hasWinner()) {
 			return playerWithHighestScore() + " wins";
