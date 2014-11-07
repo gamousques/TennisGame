@@ -7,7 +7,12 @@
 package tennisgame;
 
 /**
- *
+ * Este es un ejercicio de pruebas unitarias y no sobre el uso de TDD.
+ * El objetivo es crear casos de prueba unitaria utilizando las técnicas de caja
+ * negra y luego escribir casos de prueba en Junit.
+ * 
+ * Tambien se quiere que los estudiantes utilicen el plug in Jacocover para 
+ * ver la cobertura de los casos de prueba
  * @author gaston
  */
 public class TennisGame {
@@ -22,10 +27,7 @@ public class TennisGame {
 		this.playerTwoName = playerTwoName;
 	}
 
-    /**
-     *
-     * @return
-     */
+    
     public String getScore() {
 
 		if (hasWinner()) {
