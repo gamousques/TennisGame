@@ -48,6 +48,7 @@ public class TennisGameTest {
         String result = game.getScore();
         assertEquals(expResult, result);
     }
+  
     
     @Test
     public void testFifteenLove(){
@@ -58,7 +59,7 @@ public class TennisGameTest {
         String result = game.getScore();
         assertEquals(expResult, result);
     }
-    
+    /*   
      @Test
     public void testFiftennAll(){
         System.out.println("Fifteen,all");
@@ -70,6 +71,7 @@ public class TennisGameTest {
         assertEquals(expResult, result);
     }
     
+ 
     @Test
     public void testFortyThirty(){
         System.out.println("Forty,Thirty");
@@ -217,7 +219,7 @@ public class TennisGameTest {
         String result = game.getScore();
         assertEquals(expResult, result);
     }
-
+*/
     /**
      * Test of getScore method, of class TennisGame.
      */
