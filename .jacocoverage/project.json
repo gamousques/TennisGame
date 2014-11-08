@@ -7,6 +7,6 @@
     "JaCoCoverage.Html.EnableReport" : "true",
     "JaCoCoverage.JaCoCoWorkfiles.Rule" : "0",
     "JaCoCoverage.NbConsole.EnableReport" : "true",
-    "JaCoCoverage.Prj.OverrideGlobals" : "true"
+    "JaCoCoverage.Prj.OverrideGlobals" : "false"
   }
 }

@@ -40,7 +40,8 @@ public class TennisGameTest {
     public void tearDown() {
     }
 
-     @Test
+  /*  
+    @Test
     public void testLoveAll(){
         System.out.println("Love all");
         game = new TennisGame("Pedro", "Juan");
@@ -59,7 +60,7 @@ public class TennisGameTest {
         String result = game.getScore();
         assertEquals(expResult, result);
     }
-    /*   
+ 
      @Test
     public void testFiftennAll(){
         System.out.println("Fifteen,all");
