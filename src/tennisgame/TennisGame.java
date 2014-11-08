@@ -48,8 +48,8 @@ public class TennisGame {
 		return translateScore(playerOneScore) + "," + translateScore(playerTwoScore);
 	}
 
-	private boolean isDeuce() {
-		return playerOneScore >= 3 && playerTwoScore == playerOneScore;
+	private boolean isDeuce() { //error deberia decir playerOneScore >= 3
+		return playerOneScore >= 4 && playerTwoScore == playerOneScore;
 	}
 	
 	private String playerWithHighestScore() {
@@ -63,13 +63,15 @@ public class TennisGame {
 	private boolean hasWinner() {
 		if(playerTwoScore >= 4 && playerTwoScore >= playerOneScore + 2 )
 			return true;
-		if(playerOneScore >= 4 && playerOneScore >= playerTwoScore + 2)
+        // error en la sentencia de abajo  if(playerOneScore >= 4 && playerOneScore >= playerTwoScore + 2)
+		if(playerOneScore >= 4 && playerOneScore >= playerTwoScore )
 			return true;
 		return false;
 	}
 	
 	private boolean hasAdvantage() {
-		if (playerTwoScore >= 4 && playerTwoScore == playerOneScore + 1)
+                // error en la sentencia de abajo esta es correcta if (playerTwoScore >= 4 && playerTwoScore == playerOneScore + 1)	
+                if (playerTwoScore >= 4 && playerTwoScore == playerOneScore )
 			return true;
 		if (playerOneScore >= 4 && playerOneScore == playerTwoScore + 1)
 			return true;
@@ -96,7 +98,7 @@ public class TennisGame {
 			return "Fifteen";
 		case 0:
 			return "Love";
-		}
+                		}
 		throw new IllegalArgumentException("Illegal score: " + score);
 	}
 }
